@@ -1,0 +1,2 @@
+# praktika
+Repo für Praktikas
