@@ -32,6 +32,29 @@
   <button onclick="spiel('Papier')">Papier</button>
 
   <div id="result"></div>
+  <script>
+    function spiel(spielerAuswahl) {
+      var auswahlmoeglichkeiten = ['Schere', 'Stein', 'Papier'];
+      var computerAuswahl = auswahlmoeglichkeiten[Math.floor(Math.random() * 3)];
+
+      var ergebnis = '';
+
+      if (spielerAuswahl === computerAuswahl) {
+        ergebnis = 'Unentschieden!';
+      } else if (
+        (spielerAuswahl === 'Schere' && computerAuswahl === 'Papier') ||
+        (spielerAuswahl === 'Stein' && computerAuswahl === 'Schere') ||
+        (spielerAuswahl === 'Papier' && computerAuswahl === 'Stein')
+      ) {
+        ergebnis = 'Du hast gewonnen!';
+      } else {
+        ergebnis = 'Du hast Verloren!';
+      }
+
+      document.getElementById('result').innerHTML = 'Du wählst ' + spielerAuswahl + '. Der Computer wählt ' + computerAuswahl + '. ' + ergebnis;
+    }
+
+  </script>
 
    
 </body>
