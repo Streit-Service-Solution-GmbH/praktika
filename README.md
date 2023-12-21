@@ -1,7 +1,7 @@
 # praktika
-Repo für Praktikas
+Repository für Praktikas
 
-##
+## Aufgaben
 
 - Volumen von einem Quader berechnen
 - Alter überprüfen
