@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+  <title>Mein Steckbrief</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #steckbrief {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    span {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="steckbrief">
+    <h2>Mein Steckbrief</h2>
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Dein Name">
+
+    <label for="nachname">Nachname:</label>
+    <input type="text" id="nachname" placeholder="Dein Nachname">
+
+    <label for="anschrift">Anschrift:</label>
+    <input type="text" id="anschrift" placeholder="Deine Anschrift">
+
+    <label for="geburtsdatum">Geburtsdatum:</label>
+    <input type="text" id="geburtsdatum" placeholder="Dein Geburtsdatum">
+
+    <label for="geburtsort">Geburtsort:</label>
+    <input type="text" id="geburtsort" placeholder="Dein Geburtsort">
+
+    <label for="lieblingsessen">Lieblingsessen:</label>
+    <input type="text" id="lieblingsessen" placeholder="Dein Lieblingsessen">
+
+    <label for="zeigeSteckbrief" style="color: white;">Steckbrief anzeigen: </label>
+    <button onclick="zeigeSteckbrief()">Steckbrief anzeigen</button>
+  </div>
+
+  <script>
+    function zeigeSteckbrief() {
+      var name = document.getElementById('name').value;
+      var nachname = document.getElementById('nachname').value;
+      var anschrift = document.getElementById('anschrift').value;
+      var geburtsdatum = document.getElementById('geburtsdatum').value;
+      var geburtsort = document.getElementById('geburtsort').value;
+      var lieblingsessen = document.getElementById('lieblingsessen').value;
+
+      var steckbriefElement = document.getElementById('steckbrief');
+      steckbriefElement.innerHTML = `
+        <h2>Mein Steckbrief</h2>
+        <label for="name">Name:</label>
+        <span>${name}</span>
+
+        <label for="nachname">Nachname:</label>
+        <span>${nachname}</span>
+
+        <label for="anschrift">Anschrift:</label>
+        <span>${anschrift}</span>
+
+        <label for="geburtsdatum">Geburtsdatum:</label>
+        <span>${geburtsdatum}</span>
+
+        <label for="geburtsort">Geburtsort:</label>
+        <span>${geburtsort}</span>
+
+        <label for="lieblingsessen">Lieblingsessen:</label>
+        <span>${lieblingsessen}</span>
+      `;
+    }
+  </script>
+
+</body>
+</html>
